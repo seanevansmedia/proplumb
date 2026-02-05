@@ -25,7 +25,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-24 bg-[#f0f7ff]">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         <div className="mb-16">
           <h2 className="text-blue-600 font-bold uppercase tracking-wider mb-2">Our Expertise</h2>
@@ -38,7 +38,7 @@ const Services = () => {
           {services.map((service, i) => (
             <div 
               key={i} 
-              className="group bg-[#001529] p-10 rounded-[2.5rem] border border-slate-800 hover:border-blue-500/50 shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
+              className="group bg-[#162e64] p-10 rounded-[2.5rem] border border-slate-800 hover:border-blue-500/50 shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
               onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <div>

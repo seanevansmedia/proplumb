@@ -7,9 +7,9 @@ const ContactCTA = () => {
   const phoneLink = "tel:5551234567";
 
   return (
-    <section className="py-20 bg-blue-600">
+    <section className="py-20 bg-[#f0f7ff]">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-        <div className="bg-[#001529] rounded-[3rem] p-8 md:p-16 shadow-2xl overflow-hidden relative text-center lg:text-left">
+        <div className="bg-[#162e64] rounded-[3rem] p-8 md:p-16 shadow-2xl overflow-hidden relative text-center lg:text-left">
           
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
             <div>
@@ -25,12 +25,12 @@ const ContactCTA = () => {
             </div>
 
             <div className="w-full lg:w-auto flex flex-col gap-4">
-              <a href={phoneLink} className="flex items-center justify-center gap-4 bg-blue-600 hover:bg-blue-500 text-white px-12 py-8 rounded-[2rem] font-black text-3xl transition-all shadow-xl transform hover:-translate-y-2">
+              <a href={phoneLink} className="flex items-center justify-center gap-4 bg-blue-600 hover:bg-blue-500 text-white px-12 py-8 rounded-[2rem] font-black text-3xl transition-all shadow-xl transform hover:-translate-y-2 cursor-pointer">
                 <Phone size={32} fill="currentColor" /> {phoneNumber}
               </a>
               <button 
                 onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-blue-400 font-black uppercase tracking-widest text-sm hover:text-white transition-colors"
+                className="text-blue-400 font-black uppercase tracking-widest text-sm hover:text-white transition-colors cursor-pointer"
               >
                 Or Request a Free Quote Online
               </button>

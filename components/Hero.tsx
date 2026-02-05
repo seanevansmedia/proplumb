@@ -22,7 +22,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative bg-[#001529] overflow-hidden pt-12 pb-16 lg:pt-16 lg:pb-24 flex items-center min-h-[85vh]">
+    <section className="relative bg-[#162e64] overflow-hidden pt-12 pb-16 lg:pt-16 lg:pb-24 flex items-center min-h-[85vh]">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.15)_0%,transparent_50%)]"></div>
       </div>
@@ -56,13 +56,13 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-5 mb-12">
-              <a href={phoneLink} className="w-full sm:w-auto flex items-center justify-center gap-4 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-2xl transition-all shadow-lg transform hover:-translate-y-1 active:scale-95">
+              <a href={phoneLink} className="w-full sm:w-auto flex items-center justify-center gap-4 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-2xl transition-all shadow-lg transform hover:-translate-y-1 active:scale-95 cursor-pointer">
                 <Phone size={28} fill="currentColor" />
                 {phoneNumber}
               </a>
               <button 
                 onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-auto flex items-center justify-center px-10 py-5 rounded-2xl font-black text-2xl text-white border-2 border-white/20 hover:bg-white/10 transition-all backdrop-blur-sm"
+                className="w-full sm:w-auto flex items-center justify-center px-10 py-5 rounded-2xl font-black text-2xl text-white border-2 border-white/20 hover:bg-white/10 transition-all backdrop-blur-sm cursor-pointer"
               >
                 Get a Quote
               </button>
@@ -113,7 +113,7 @@ const Hero = () => {
                     <option>Other</option>
                   </select>
                 </div>
-                <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-xl py-5 rounded-xl shadow-xl flex items-center justify-center gap-3 mt-4 transform hover:-translate-y-1 active:scale-95 transition-all">
+                <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-xl py-5 rounded-xl shadow-xl flex items-center justify-center gap-3 mt-4 transform hover:-translate-y-1 active:scale-95 transition-all cursor-pointer">
                   <Send size={20} /> SEND REQUEST
                 </button>
               </form>

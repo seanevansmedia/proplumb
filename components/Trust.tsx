@@ -22,7 +22,7 @@ const reviews = [
 
 const Trust = () => {
   return (
-    <section id="reviews" className="py-24 bg-[#001529]">
+    <section id="reviews" className="py-24 bg-[#162e64]">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         
         {/* Header Section */}
