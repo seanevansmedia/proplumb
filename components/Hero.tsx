@@ -22,19 +22,30 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative bg-[#162e64] overflow-hidden pt-12 pb-16 lg:pt-16 lg:pb-24 flex items-center min-h-[85vh]">
+    <section className="relative bg-[#0a192f] overflow-hidden pt-12 pb-16 lg:pt-16 lg:pb-24 flex items-center min-h-[85vh]">
+      
+      {/* BACKGROUND IMAGE LAYER */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.15)_0%,transparent_50%)]"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=2000&auto=format&fit=crop" 
+          alt="Plumbing Work" 
+          className="w-full h-full object-cover opacity-40" 
+        />
+        {/* Dark Blue Faded Overlay - This makes the image visible but keeps text readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#162e64] via-[#162e64]/80 to-[#162e64]/40"></div>
       </div>
-      <div className="absolute inset-0 z-0 opacity-[0.15]" 
+
+      {/* Decorative Dot Pattern */}
+      <div className="absolute inset-0 z-0 opacity-[0.1]" 
            style={{ backgroundImage: `radial-gradient(#2563eb 0.5px, transparent 0.5px)`, backgroundSize: '30px 30px' }}>
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 w-full">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           
+          {/* Left Side Content */}
           <div className="w-full lg:w-3/5 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-400/30 px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-blue-600/30 border border-blue-400/30 px-4 py-2 rounded-full mb-6 backdrop-blur-md">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
@@ -44,10 +55,10 @@ const Hero = () => {
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1] tracking-tighter mb-6">
               PLUMBING PROBLEMS? <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 uppercase">We Fix Them Fast.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500 uppercase">We Fix Them Fast.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-blue-100/80 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+            <p className="text-lg md:text-xl text-blue-100/90 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
               Don't let a leak turn into a disaster. Our expert plumbers are stationed in{" "}
               <span className="text-white font-bold underline decoration-blue-500 underline-offset-4 capitalize">
                 {city}
@@ -61,37 +72,37 @@ const Hero = () => {
                 {phoneNumber}
               </a>
               <button 
-                onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                 className="w-full sm:w-auto flex items-center justify-center px-10 py-5 rounded-2xl font-black text-2xl text-white border-2 border-white/20 hover:bg-white/10 transition-all backdrop-blur-sm cursor-pointer"
               >
-                Get a Quote
+                Our Services
               </button>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/10">
               <div className="flex items-center gap-2 group">
-                <ShieldCheck className="text-blue-500 h-5 w-5 group-hover:scale-110 transition-transform" />
+                <ShieldCheck className="text-blue-400 h-5 w-5" />
                 <span className="text-white font-bold text-sm">Licensed & Insured</span>
               </div>
               <div className="flex items-center gap-2 group">
-                <Clock className="text-blue-500 h-5 w-5 group-hover:scale-110 transition-transform" />
+                <Clock className="text-blue-400 h-5 w-5" />
                 <span className="text-white font-bold text-sm">60 Min Arrival</span>
               </div>
               <div className="flex items-center gap-2 group">
-                <Award className="text-blue-500 h-5 w-5 group-hover:scale-110 transition-transform" />
+                <Award className="text-blue-400 h-5 w-5" />
                 <span className="text-white font-bold text-sm">5-Star Rated</span>
               </div>
               <div className="flex items-center gap-2 group">
-                <CheckCircle2 className="text-blue-500 h-5 w-5 group-hover:scale-110 transition-transform" />
+                <CheckCircle2 className="text-blue-400 h-5 w-5" />
                 <span className="text-white font-bold text-sm">Upfront Pricing</span>
               </div>
             </div>
           </div>
 
-          {/* Form Side with Scroll margin fix */}
-          <div id="quote-form" className="w-full lg:w-[460px] scroll-mt-32">
+          {/* Form Side with Centered Header */}
+          <div className="w-full lg:w-[460px]">
             <div className="bg-white rounded-[2rem] p-8 lg:p-10 shadow-2xl relative overflow-hidden">
-              <div className="relative z-10 mb-8">
+              <div className="relative z-10 mb-8 text-center">
                 <h3 className="text-2xl font-black text-slate-900 leading-none mb-2 uppercase">Get a Free Quote</h3>
                 <p className="text-slate-500 font-medium text-sm">Response in 15 minutes or less.</p>
               </div>
@@ -120,6 +131,7 @@ const Hero = () => {
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 z-0"></div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
